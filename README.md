@@ -31,7 +31,27 @@
 
 ## Run Instructions
 
-- To train the model, ensure your data files are in the `data/` directory and execute:
-  ```bash
-  python src/train.py
-  ```
+### Train
+
+```bash
+python src/train.py
+```
+
+### Predict (inference)
+
+Place the following files in `data/`:
+
+- `History.csv` (past matches with `Date, HomeTeam, AwayTeam, FTHG, FTAG, FTR`)
+- `Fixtures.csv` (upcoming matches with `Date, HomeTeam, AwayTeam`)
+
+Then run:
+
+```bash
+python src/predict.py
+```
+
+Predictions will be saved to:
+
+```
+artifacts/predictions.csv
+```
